@@ -28,7 +28,7 @@ app.get('/api/timestamp/:date_string?', (req,res)=>{
   let date;
   let params = parseInt(req.params.date_string);
   
-  if(params == undefined){
+  if(isNaN(params)){
     date = new Date();
   } else {
     date = new Date(params);
